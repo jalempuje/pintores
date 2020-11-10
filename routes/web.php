@@ -13,6 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'controlador@login');
+
+Route::get('/leo', [
+    'uses'=>'controlador@leo',
+    'as'=>'Leo']);
+
+
+Route::get('/eli', [
+    'uses'=>'controlador@eli',
+    'as'=>'eli']);
+
+Route::get('/fri', [
+    'uses'=>'controlador@fri',
+    'as'=>'fri']);
+
+Route::get('/pic', [
+    'uses'=>'controlador@pic',
+    'as'=>'pic']);
+
+Route::get('/van', [
+    'uses'=>'controlador@van',
+    'as'=>'van']);
+
+Route::post('/valida', 'controlador@validarlogin');
+    
